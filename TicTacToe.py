@@ -26,7 +26,7 @@ create_board(sq)
 	
 def record_moves():
 	move = 10
-	while move not in range(1, 10) or is_sq_is_sq_occupied
+	while move not in range(1, 10) or is_sq_occupied(move):
 		move = eval(input('Enter valid move: '))
 		sq[move] = 'X'
 
@@ -35,11 +35,30 @@ print(record_moves())
 create_board
 
 def is_sq_occupied(num):
-	if sq [num] == '': 
-		return False
-	else:
+	# if sq [num] == '': 
+	# 	return False
+	# else:
+	# 	return True
+	return sq[num] != ' '
+
+	def sq_is_full():
+		for index in range (1, 10):
+			print('idx:', index, 'sq[idx]:', sq[index])
+			if sq[index] == '':
+				return False
 		return True
-	return sq[num] |= ''
+		print (sq_is_full())
+
+	def three_in_a_row():
+		return ((sq[7] == sq[8] == sq[9] and sq[7]!= ' ') or
+				(sq[6] == sq[5] == sq[4] and sq[6]!= ' ') or
+				(sq[3] == sq[2] == sq[1] and sq[3]!= ' ') or 
+				(sq[7] == sq[4] == sq[1] and sq[3]!= ' ') or
+				(sq[8] == sq[5] == sq[2] and sq[3]!= ' ') or
+				(sq[9] == sq[6] == sq[3] and sq[3]!= ' ') or
+				(sq[7] == sq[5] == sq[3] and sq[3]!= ' ') or
+				(sq[9] == sq[5] == sq[1] and sq[3]!= ' '))
+print(three_in_a_row)
 	
 
 
