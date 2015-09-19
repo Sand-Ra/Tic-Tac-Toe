@@ -21,18 +21,26 @@ print_intro()
 
 sq[5] = 'X'
 sq[6] = 'O'
+sq[1] = 'X'
 create_board(sq)
 	
 def record_moves():
-	move = ''
-	while move not in range(1, 10):
+	move = 10
+	while move not in range(1, 10) or is_sq_is_sq_occupied
 		move = eval(input('Enter valid move: '))
 		sq[move] = 'X'
 
 print(record_moves())
-
+5
 create_board
 
+def is_sq_occupied(num):
+	if sq [num] == '': 
+		return False
+	else:
+		return True
+	return sq[num] |= ''
+	
 
 
 #Tasks
